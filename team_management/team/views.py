@@ -14,7 +14,8 @@ import json
 
 # Create your views here.
 class TeamView(APIView):
-
+	"""API to manage team members """
+	
 	def get(self, request):
 		teams = Team.objects.all()
 		serializer = TeamSerializer(teams, many=True)
